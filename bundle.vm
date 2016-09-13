@@ -1,0 +1,22 @@
+set nocompatible
+filetype off 
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Git & Version Control
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+
+" Search
+Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/neocomplete.vim'
+
+" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'ternjs/tern_for_vim'
+
+call vundle#end()
+filetype plugin indent on
