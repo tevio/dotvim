@@ -1,0 +1,39 @@
+" File menu navigation
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+
+" Tab navigation
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>tt :tabnext<CR>
+nnoremap <leader>tp :tabprevious<CR>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>q :q<CR>
+
+" Git mappings
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gcd :Gedit<CR><C-w>h :q<CR><C-w>k
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gpl :Git push<CR>
+nnoremap <leader>ga% :Git add %<CR>
+
+nnoremap <leader>gv :Gitv<CR>
+nnoremap <leader>gvf :Gitv!<CR>
+
+" View modification
+nnoremap <leader>nu :set nu<CR>
+nnoremap <leader>nnu :set nonu<CR>
+
+nnoremap <leader>sp :set paste<CR>
+nnoremap <leader>snp :set nopaste<CR>
+
+" Vim admin
+nnoremap <leader>so :source ~/.vimrc<CR>
+nnoremap <leader>ev :e ~/.vimrc<CR>
+nnoremap <leader>es :e ~/.vim/settings.vm<CR>
+nnoremap <leader>eh :e ~/.vim/syntax.vm<CR>
+nnoremap <leader>em :e ~/.vim/mappings.vm<CR>
+nnoremap <leader>eb :e ~/.vim/bundle.vm<CR>
+nnoremap <leader>er :e ~/.vim/regex.vm<CR>
+nnoremap <leader>ec :e ~/.vim/cheatsheet.txt<CR>
