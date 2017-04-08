@@ -37,3 +37,27 @@ nnoremap <leader>em :e ~/.vim/mappings.vm<CR>
 nnoremap <leader>eb :e ~/.vim/bundle.vm<CR>
 nnoremap <leader>er :e ~/.vim/regex.vm<CR>
 nnoremap <leader>ec :e ~/.vim/cheatsheet.txt<CR>
+
+" Test focussing
+
+" remove all instances of focus: true
+nnoremap <leader>ruf :%s/, focus: true//g<CR>
+nnoremap <leader>juf :%s!\v((describe)\|(it)).only!\2\3!g\|:nohl<CR>
+
+" insert focus: true on current line
+nnoremap <leader>rf $bhi, focus: true<Esc>
+nnoremap <leader>rfb ?\v(it)\|(describe)\|(context)<CR>\|$bhi, focus: true<Esc>
+
+nnoremap <leader>jf :s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
+nnoremap <leader>jfb ?\v(it)\|(describe)<CR>\|:s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
+
+nnoremap <leader>log Oconsole.log();<Esc>ba
+
+" cnoreabbrev NERDTreeFromBookmark OB -nargs=1
+" command -nargs=1 OB call NERDTreeFromBookmark(<f-args>)
+command! -n=1 -complete=customlist,nerdtree#completeBookmarks -bar OB call g:NERDTreeCreator.CreateTabTree('<args>')
+    
+command -nargs=0 OBt :NERDTreeFromBookmark test
+command -nargs=0 OBs :NERDTreeFromBookmark src
+
+nnoremap <C-n> :NERDTreeToggle<CR> 

@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
 
 " UI
 Plugin 'bling/vim-airline'
@@ -12,7 +12,7 @@ Plugin 'flazz/vim-colorschemes'
 
 " Git & Version Control
 Plugin 'tpope/vim-fugitive'
-" Plugin 'gregsexton/gitv'
+Plugin 'gregsexton/gitv'
 Plugin 'airblade/vim-gitgutter'
 
 " Search
