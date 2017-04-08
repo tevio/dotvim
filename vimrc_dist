@@ -1,0 +1,86 @@
+source ~/.vim/windowing.vm
+source ~/.vim/bundle.vm
+source ~/.vim/neo.vm
+source ~/.vim/mappings.vm
+source ~/.vim/colours.vm
+
+" Filetypes
+set nocompatible
+syntax on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+
+" Colours
+set t_Co=256
+set background=dark
+colorscheme  Tomorrow-Night
+" colorscheme 256-grayvim
+
+" Mappings
+let mapleader = "\\"
+
+" Node
+set suffixesadd+=.js
+set path+=$PWD/node_modules
+
+" Status line
+set laststatus=2
+
+" Backspace
+set backspace=2
+
+" Backup and Swap
+set nobackup
+set noswapfile
+
+" Indentation rules
+set autoindent
+set smartindent
+set softtabstop=2
+set shiftwidth=2
+set tabstop=4
+set expandtab
+set nosmarttab
+
+" ui
+set ruler
+set noshowcmd
+set nolazyredraw
+set number
+set nostartofline
+set cursorline
+set showmatch
+set virtualedit=block
+set hlsearch
+
+" Auto commands
+" autocmd BufWritePre * %s/\s\+$//e
+
+" Formatting
+let g:vimrubocop_config = '.rubocop.yml'
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'eslint'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_w = 1
+let g:syntastic_check_on_wq = 0
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Remap Escape to ;;
+imap ;; <Esc>l
+
+" Ctrl P Config
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Folding setup
+"
+set foldmethod=syntax
+
+" Wildignore
+"
+" wildignore=*node_modules*
