@@ -59,8 +59,14 @@ set hlsearch
 
 " Formatting
 let g:vimrubocop_config = '.rubocop.yml'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'eslint'
+" https://github.com/vim-syntastic/syntastic/issues/1484
+"
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = 'eslint'
+"
+let g:syntastic_javascript_checkers = []
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') !=# '' ? ['eslint'] : []
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -84,3 +90,13 @@ set foldmethod=syntax
 " Wildignore
 "
 " wildignore=*node_modules*
+"
+autocmd BufWritePre * %s/\s\+$//e
+
+augroup vimrc
+
+  autocmd!
+
+  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+
+augroup END
