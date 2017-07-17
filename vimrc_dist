@@ -81,16 +81,16 @@ set statusline+=%*
 imap ;; <Esc>l
 
 " Ctrl P Config
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'
 
 " Folding setup
 "
 set foldmethod=syntax
 
 " Wildignore
-"
-" wildignore=*node_modules*
-"
+
+" set wildignore += /node_modules/, dist/*, coverage/*
+
 autocmd BufWritePre * %s/\s\+$//e
 
 augroup vimrc

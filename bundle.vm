@@ -16,7 +16,7 @@ Plugin 'gregsexton/gitv'
 Plugin 'airblade/vim-gitgutter'
 
 " Search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -41,6 +41,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'tpope/vim-abolish'
 
 " Syntax
 Plugin 'scrooloose/syntastic'
