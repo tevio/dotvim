@@ -25,10 +25,13 @@ Plugin 'nelstrom/vim-visual-star-search'
 
 " Autocomplete
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'isRuslan/vim-es6'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'

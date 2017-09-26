@@ -49,7 +49,9 @@ set noshowcmd
 set nolazyredraw
 set number
 set nostartofline
-set cursorline
+if !&diff
+  set cursorline
+endif
 set showmatch
 set virtualedit=block
 set hlsearch
@@ -83,6 +85,11 @@ imap ;; <Esc>l
 " Ctrl P Config
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'
 
+" Ultisnip setup
+let g:UltiSnipsExpandTrigger="<f5>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " Folding setup
 "
 set foldmethod=syntax
@@ -100,3 +107,8 @@ augroup vimrc
   autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
 
 augroup END
+
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red

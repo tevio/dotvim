@@ -50,8 +50,14 @@ nnoremap <leader>rfb ?\v(it)\|(describe)\|(context)<CR>\|$bhi, focus: true<Esc>:
 
 nnoremap <leader>jf :s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
 nnoremap <leader>jfb ?\v(it)\|(describe)<CR>\|:s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
+nnoremap <leader>jsc :!eslint --fix %<CR>
+
+" nnoremap <leader>fcm /\v(HEAD\|<<<.*\|>>>.*)<CR>
+" nnoremap <leader>fcm :s!\v(HEAD\|<<<.*\|>>>.*\|^====.*\|^<Bar><Bar><Bar><Bar>.*)!<CR>
+nnoremap <leader>fcm :s!\v(^HEAD\\|^<<<*\\|^>>>*)!<CR>
 
 nnoremap <leader>log Oconsole.log();<Esc>ba
+nnoremap <leader>dlog :%g/console.*$/d
 
 " cnoreabbrev NERDTreeFromBookmark OB -nargs=1
 " command -nargs=1 OB call NERDTreeFromBookmark(<f-args>)
@@ -61,3 +67,8 @@ command -nargs=0 OBt :NERDTreeFromBookmark test
 command -nargs=0 OBs :NERDTreeFromBookmark src
 
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>esf :!eslint --fix %<CR>
+
+nnoremap * :keepjumps normal! mi*`i<CR>
+
+com! FormatJSON %!python -m json.tool
