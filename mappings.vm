@@ -51,6 +51,7 @@ nnoremap <leader>rfb ?\v(it)\|(describe)\|(context)<CR>\|$bhi, focus: true<Esc>:
 nnoremap <leader>jf :s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
 nnoremap <leader>jfb ?\v(it)\|(describe)<CR>\|:s!\v(describe)\|(it)!\1\2.only!\|:nohl<CR>
 nnoremap <leader>jsc :!eslint --fix %<CR>
+nnoremap <leader>esd $a // eslint-disable-line<CR>
 
 " nnoremap <leader>fcm /\v(HEAD\|<<<.*\|>>>.*)<CR>
 " nnoremap <leader>fcm :s!\v(HEAD\|<<<.*\|>>>.*\|^====.*\|^<Bar><Bar><Bar><Bar>.*)!<CR>
