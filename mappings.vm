@@ -38,6 +38,21 @@ nnoremap <leader>eb :e ~/.vim/bundle.vm<CR>
 nnoremap <leader>er :e ~/.vim/regex.vm<CR>
 nnoremap <leader>ec :e ~/.vim/cheatsheet.txt<CR>
 
+" Ruby mappings
+" /\("[^"'(#{]*"\)
+" :%s/\("[^"]+"\)/\1.freeze/gc
+" /\("[^"'(#{]*"\)
+" :%s!\v("[^"'(#{]*")!\1.freeze!gc
+
+" WIP nnoremap <leader>rfsm :%s/\("\(.*#{\)\@![^"']*"\)/\1.freeze/gc\|:nohl<CR>
+
+" WIP nnoremap <leader>rfsi :%s/\('[^"'(#{)]*'\)/\1.freeze/gc\|:nohl<CR>
+
+"#{test}"
+"# test"
+" test"
+"( test"
+
 " Test focussing
 
 " remove all instances of focus: true

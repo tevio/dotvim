@@ -32,6 +32,11 @@ Plugin 'honza/vim-snippets'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'isRuslan/vim-es6'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -47,7 +52,8 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'tpope/vim-abolish'
 
 " Syntax
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'millermedeiros/vim-esformatter'
 Plugin 'ngmy/vim-rubocop'
 

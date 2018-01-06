@@ -19,6 +19,7 @@ colorscheme  Tomorrow-Night
 
 " Mappings
 let mapleader = "\\"
+set clipboard=unnamedplus
 
 " Node
 set suffixesadd+=.js
@@ -76,7 +77,7 @@ let g:syntastic_check_on_w = 1
 let g:syntastic_check_on_wq = 0
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " Remap Escape to ;;
@@ -90,6 +91,7 @@ let g:UltiSnipsExpandTrigger="<f5>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" :%s/\("[^"]+"\)/\1.freeze/gc
 " Folding setup
 "
 set foldmethod=syntax
