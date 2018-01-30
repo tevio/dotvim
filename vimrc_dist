@@ -1,4 +1,4 @@
-source ~/.vim/windowing.vm
+" source ~/.vim/windowing.vm
 source ~/.vim/bundle.vm
 source ~/.vim/neo.vm
 source ~/.vim/mappings.vm
@@ -62,6 +62,7 @@ set hlsearch
 
 " Formatting
 let g:vimrubocop_config = '.rubocop.yml'
+let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['eslint']}
 " https://github.com/vim-syntastic/syntastic/issues/1484
 "
 " let g:syntastic_javascript_checkers = ['eslint']

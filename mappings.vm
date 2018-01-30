@@ -79,8 +79,8 @@ nnoremap <leader>dlog :%g/console.*$/d
 " command -nargs=1 OB call NERDTreeFromBookmark(<f-args>)
 command! -n=1 -complete=customlist,nerdtree#completeBookmarks -bar OB call g:NERDTreeCreator.CreateTabTree('<args>')
 
-command -nargs=0 OBt :NERDTreeFromBookmark test
-command -nargs=0 OBs :NERDTreeFromBookmark src
+" command -nargs=0 OBt :NERDTreeFromBookmark test
+" command -nargs=0 OBs :NERDTreeFromBookmark src
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>esf :!eslint --fix %<CR>

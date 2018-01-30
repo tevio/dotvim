@@ -61,5 +61,9 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-dispatch'
 Plugin 'janko-m/vim-test'
 
+" System
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+
 call vundle#end()
 filetype plugin indent on
