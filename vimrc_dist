@@ -14,7 +14,8 @@ filetype plugin on    " Enable filetype-specific plugins
 " Colours
 set t_Co=256
 set background=dark
-colorscheme  Tomorrow-Night
+colorscheme  pyte
+" colorscheme  Tomorrow-Night
 " colorscheme 256-grayvim
 
 " Mappings

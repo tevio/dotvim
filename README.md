@@ -10,11 +10,13 @@ This is a light weight vim config focussed around javascript and ruby developmen
 
 clone it
 
-ln -s dotvim ~/.vim
-ln -s ~/.vim/vimrc_dist ~/.vimrc
+```
+ln -sf dotvim ~/.vim
+ln -sf ~/.vim/vimrc_dist ~/.vimrc
 cd ~/.vim
 git submodule init
 git submodule update
+```
 
 ### Who do I talk to? ###
 

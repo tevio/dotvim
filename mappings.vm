@@ -38,6 +38,9 @@ nnoremap <leader>eb :e ~/.vim/bundle.vm<CR>
 nnoremap <leader>er :e ~/.vim/regex.vm<CR>
 nnoremap <leader>ec :e ~/.vim/cheatsheet.txt<CR>
 
+" Visual mappings
+" reverse selected text
+vnoremap <Leader>r c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
 " Ruby mappings
 " /\("[^"'(#{]*"\)
 " :%s/\("[^"]+"\)/\1.freeze/gc
@@ -52,6 +55,9 @@ nnoremap <leader>ec :e ~/.vim/cheatsheet.txt<CR>
 "# test"
 " test"
 "( test"
+
+" LVS specific macro for local gem
+" ^EwveehyEEEa, path: '../gemspbi€kb/:w
 
 " Test focussing
 
