@@ -94,3 +94,12 @@ nnoremap <leader>esf :!eslint --fix %<CR>
 nnoremap * :keepjumps normal! mi*`i<CR>
 
 com! FormatJSON %!python -m json.tool
+
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" nnoremap <C-]> :only<bar>vsplit<CR>:execute "tag" . expand('<cword>')<CR>

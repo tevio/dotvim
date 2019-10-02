@@ -14,13 +14,13 @@ filetype plugin on    " Enable filetype-specific plugins
 " Colours
 set t_Co=256
 set background=dark
-colorscheme  pyte
-" colorscheme  Tomorrow-Night
+" colorscheme  pyte
+colorscheme  Tomorrow-Night
 " colorscheme 256-grayvim
 
 " Mappings
 let mapleader = "\\"
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Node
 set suffixesadd+=.js
@@ -58,19 +58,23 @@ set showmatch
 set virtualedit=block
 set hlsearch
 
+"Session
+let g:session_autoload = 'no'
+
 " Auto commands
 " autocmd BufWritePre * %s/\s\+$//e
 
 " Formatting
 let g:vimrubocop_config = '.rubocop.yml'
 let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['eslint']}
+" let g:ale_ruby_rubocop_executable = 'bin/rubocop'
+
 " https://github.com/vim-syntastic/syntastic/issues/1484
 "
 " let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_javascript_eslint_exe = 'eslint'
 "
 let g:syntastic_javascript_checkers = []
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') !=# '' ? ['eslint'] : []
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -102,17 +106,25 @@ set foldmethod=syntax
 
 " set wildignore += /node_modules/, dist/*, coverage/*
 
-autocmd BufWritePre * %s/\s\+$//e
-
 augroup vimrc
 
   autocmd!
 
+  autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') !=# '' ? ['eslint'] : []
+
+  autocmd BufWritePre * %s/\s\+$//e
+
   autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+
+  autocmd GUIEnter * set vb t_vb=
 
 augroup END
 
-highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=DarkSeaGreen2
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=SteelBlue2
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=firebrick
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=LightGoldenrod1
+" hi CursorLine guifg=red guibg=blue
+
+set visualbell t_vb=
+set noerrorbells

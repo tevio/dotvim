@@ -6,6 +6,9 @@ call vundle#begin()
 
 " Plugin 'VundleVim/Vundle.vim'
 
+" Pairing
+" Plugin 'Floobits/floobits-vim'
+
 " UI
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
