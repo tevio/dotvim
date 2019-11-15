@@ -31,18 +31,19 @@ Plugin 'ludovicchabant/vim-gutentags'
 
 " Autocomplete
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 
 " Javascript
-Plugin 'pangloss/vim-javascript'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'isRuslan/vim-es6'
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'ternjs/tern_for_vim'
+" Plugin 'isRuslan/vim-es6'
+" Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'millermedeiros/vim-esformatter'
 
 " Typescript
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi'
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'Quramy/tsuquyomi'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -52,7 +53,7 @@ Plugin 'tpope/vim-rails'
 " Plugin 'rainerborene/vim-reek'
 
 " Elm
-Plugin 'elmcast/elm-vim'
+" Plugin 'elmcast/elm-vim'
 
 " Editing
 Plugin 'tpope/vim-surround'
@@ -62,11 +63,11 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'tpope/vim-abolish'
 Plugin 'wgurecky/vimSum'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Syntax
 " Plugin 'scrooloose/syntastic'
 Plugin 'w0rp/ale'
-Plugin 'millermedeiros/vim-esformatter'
 Plugin 'ngmy/vim-rubocop'
 
 " Command line
