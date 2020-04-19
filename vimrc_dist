@@ -1,9 +1,11 @@
 " source ~/.vim/windowing.vm
 source ~/.vim/bundle.vm
-source ~/.vim/neo.vm
+" source ~/.vim/neo.vm
+source ~/.vim/deo.vm
 source ~/.vim/mappings.vm
 source ~/.vim/colours.vm
 
+set pyxversion=3
 " Filetypes
 set nocompatible
 syntax on
@@ -97,14 +99,21 @@ let g:UltiSnipsExpandTrigger="<f5>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" let g:deoplete#enable_at_startup = 1
+
 " :%s/\("[^"]+"\)/\1.freeze/gc
 " Folding setup
 "
 set foldmethod=syntax
+" set foldmethod=marker
+" set foldmarker={,}
 
 " Wildignore
 
 " set wildignore += /node_modules/, dist/*, coverage/*
+
+" Deoplete
+" let g:deoplete#enable_at_startup = 1
 
 augroup vimrc
 

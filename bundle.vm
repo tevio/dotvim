@@ -1,83 +1,98 @@
 " set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" Plugin 'VundleVim/Vundle.vim'
+" Plug 'VundleVim/Vundle.vim'
 
 " Pairing
-" Plugin 'Floobits/floobits-vim'
+" Plug 'Floobits/floobits-vim'
 
 " UI
-Plugin 'bling/vim-airline'
-Plugin 'flazz/vim-colorschemes'
+Plug 'bling/vim-airline'
+Plug 'flazz/vim-colorschemes'
 
 " Git & Version Control
-Plugin 'tpope/vim-fugitive'
-Plugin 'gregsexton/gitv'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+Plug 'airblade/vim-gitgutter'
 
 " Search
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/vim-slumlord'
-Plugin 'aklt/plantuml-syntax'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'taiansu/nerdtree-ag'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'ludovicchabant/vim-gutentags'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/vim-slumlord'
+Plug 'aklt/plantuml-syntax'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'taiansu/nerdtree-ag'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Autocomplete
-Plugin 'Shougo/neocomplete.vim'
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/neocomplete.vim'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 
 " Javascript
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'ternjs/tern_for_vim'
-" Plugin 'isRuslan/vim-es6'
-" Plugin 'mustache/vim-mustache-handlebars'
-" Plugin 'millermedeiros/vim-esformatter'
+" Plug 'pangloss/vim-javascript'
+" Plug 'ternjs/tern_for_vim'
+" Plug 'isRuslan/vim-es6'
+" Plug 'mustache/vim-mustache-handlebars'
+" Plug 'millermedeiros/vim-esformatter'
 
 " Typescript
-" Plugin 'leafgarland/typescript-vim'
-" Plugin 'Quramy/tsuquyomi'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'Quramy/tsuquyomi'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-rails'
-" Plugin 'rainerborene/vim-reek'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-rails'
+" Plug 'rainerborene/vim-reek'
 
 " Elm
-" Plugin 'elmcast/elm-vim'
+" Plug 'elmcast/elm-vim'
 
 " Editing
-Plugin 'tpope/vim-surround'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-commentary'
-Plugin 'godlygeek/tabular'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'tpope/vim-abolish'
-Plugin 'wgurecky/vimSum'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'vim-scripts/matchit.zip'
+Plug 'tpope/vim-abolish'
+Plug 'wgurecky/vimSum'
+Plug 'terryma/vim-multiple-cursors'
 
 " Syntax
-" Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
-Plugin 'ngmy/vim-rubocop'
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+Plug 'ngmy/vim-rubocop'
 
 " Command line
-Plugin 'tpope/vim-dispatch'
-Plugin 'janko-m/vim-test'
+Plug 'tpope/vim-dispatch'
+Plug 'janko-m/vim-test'
 
 " System
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'qpkorr/vim-renamer'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'qpkorr/vim-renamer'
 
-call vundle#end()
+" call vundle#end()
+
+call plug#end()
 filetype plugin indent on

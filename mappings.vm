@@ -93,6 +93,8 @@ nnoremap <leader>esf :!eslint --fix %<CR>
 
 nnoremap * :keepjumps normal! mi*`i<CR>
 
+nnoremap <C-p> :FZF<CR>
+
 com! FormatJSON %!python -m json.tool
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
