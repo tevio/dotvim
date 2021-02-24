@@ -68,7 +68,10 @@ let g:session_autoload = 'no'
 
 " Formatting
 let g:vimrubocop_config = '.rubocop.yml'
-let g:ale_fixers = {'ruby': ['rubocop'], 'javascript': ['eslint']}
+let g:ale_fixers = {'python': ['add_blank_lines_for_python_control_statements', 'autoimport', 'autopep8', 'black', 'isort', 'reorder-python-imports', 'yapf', 'remove_trailing_lines', 'trim_whitespace'], 'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'tslint'], 'vue': ['eslint']}
+let g:ale_linter_aliases = {'vue': 'javascript'}
+let g:ale_linters = {'vue': ['eslint']}
+" let g:ale_fixers = {'vue': ['eslint']}
 " let g:ale_ruby_rubocop_executable = 'bin/rubocop'
 
 " https://github.com/vim-syntastic/syntastic/issues/1484
@@ -131,3 +134,11 @@ augroup END
 
 set visualbell t_vb=
 set noerrorbells
+
+" Gutentags
+let g:gutentags_ctags_exclude = [
+    \ 'node_modules/*'
+\]
+
+" VimNPR
+let g:vim_npr_max_levels = 20
