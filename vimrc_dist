@@ -1,9 +1,10 @@
-" source ~/.vim/windowing.vm
-source ~/.vim/bundle.vm
-" source ~/.vim/neo.vm
+source ~/.vim/bundle.vim
+source ~/.vim/config.py.vim
+source ~/.vim/config.js.vim
 source ~/.vim/deo.vm
-source ~/.vim/mappings.vm
-source ~/.vim/colours.vm
+source ~/.vim/mappings.vim
+source ~/.vim/colours.vim
+
 
 set pyxversion=3
 " Filetypes
@@ -24,9 +25,6 @@ colorscheme  Tomorrow-Night
 let mapleader = "\\"
 set clipboard=unnamed
 
-" Node
-set suffixesadd+=.js
-set path+=$PWD/node_modules
 
 " Status line
 set laststatus=2
@@ -67,10 +65,13 @@ let g:session_autoload = 'no'
 " autocmd BufWritePre * %s/\s\+$//e
 
 " Formatting
+" removed  'autoimport' fixer for python
+"
+" 'add_blank_lines_for_python_control_statements', 'black', 'isort', 'reorder-python-imports', 'yapf', 'remove_trailing_lines', 'trim_whitespace'
 let g:vimrubocop_config = '.rubocop.yml'
-let g:ale_fixers = {'python': ['add_blank_lines_for_python_control_statements', 'autoimport', 'autopep8', 'black', 'isort', 'reorder-python-imports', 'yapf', 'remove_trailing_lines', 'trim_whitespace'], 'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'tslint'], 'vue': ['eslint']}
+let g:ale_fixers = {'python': [], 'ruby': ['rubocop'], 'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'tslint'], 'vue': ['eslint']}
 let g:ale_linter_aliases = {'vue': 'javascript'}
-let g:ale_linters = {'vue': ['eslint']}
+let g:ale_linters = {'vue': ['eslint'], 'python': ['pylint']}
 " let g:ale_fixers = {'vue': ['eslint']}
 " let g:ale_ruby_rubocop_executable = 'bin/rubocop'
 
@@ -140,5 +141,29 @@ let g:gutentags_ctags_exclude = [
     \ 'node_modules/*'
 \]
 
-" VimNPR
-let g:vim_npr_max_levels = 20
+" Rails
+let g:rails_projections = {
+      \  "app/lib/*.rb": {
+      \      "test": [
+      \        "spec/lib/{}_spec.rb"
+      \      ]
+      \  },
+      \  "app/controllers/*_controller.rb": {
+      \      "test": [
+      \        "spec/requests/{}_spec.rb",
+      \        "spec/controllers/{}_controller_spec.rb",
+      \        "test/controllers/{}_controller_test.rb"
+      \      ],
+      \      "alternate": [
+      \        "spec/requests/{}_spec.rb",
+      \        "spec/controllers/{}_controller_spec.rb",
+      \        "test/controllers/{}_controller_test.rb"
+      \      ],
+      \   },
+      \   "spec/requests/*_spec.rb": {
+      \      "command": "request",
+      \      "alternate": "app/controllers/{}_controller.rb",
+      \      "template": "require 'rails_helper'\n\n" .
+      \        "RSpec.describe '{}' do\nend",
+      \   },
+      \ }

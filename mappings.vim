@@ -13,6 +13,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gcd :Gedit<CR><C-w>h :q<CR><C-w>k
+nnoremap <leader>ga :Git commit --amend<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gpl :Git push<CR>
